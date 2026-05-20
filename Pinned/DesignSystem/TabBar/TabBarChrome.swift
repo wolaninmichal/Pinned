@@ -8,7 +8,6 @@
 import SwiftUI
 
 public struct TabBarChrome: View {
-    
     public enum Tab: Hashable {
         case inspect, pins
     }

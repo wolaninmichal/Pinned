@@ -8,7 +8,6 @@
 import SwiftUI
 
 public struct GlassCard: ViewModifier {
-    
     public enum Style {
         case regular
         case elevated
