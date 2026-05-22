@@ -264,6 +264,54 @@
         }
       }
     },
+    "pins.empty.action" : {
+      "comment" : "Call-to-action button on the empty Pins screen.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add your first pin set"
+          }
+        }
+      }
+    },
+    "pins.empty.message" : {
+      "comment" : "Empty-state message on the Pins screen.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save expected SPKI hashes for the\ndomains you want to monitor."
+          }
+        }
+      }
+    },
+    "pins.empty.title" : {
+      "comment" : "Title of the empty-state on the Pins screen.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No pins yet"
+          }
+        }
+      }
+    },
+    "pins.header.eyebrow" : {
+      "comment" : "Small caption above the Pins screen title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinned"
+          }
+        }
+      }
+    },
     "pins.title" : {
       "comment" : "Title of the Pins screen.",
       "localizations" : {

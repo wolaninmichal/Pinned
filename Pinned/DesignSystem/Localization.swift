@@ -66,6 +66,10 @@ public extension LocalizedStringResource {
     }
 
     enum Pins {
+        public static let eyebrow = LocalizedStringResource("pins.header.eyebrow")
         public static let title = LocalizedStringResource("pins.title")
+        public static let emptyTitle = LocalizedStringResource("pins.empty.title")
+        public static let emptyMessage = LocalizedStringResource("pins.empty.message")
+        public static let emptyAction = LocalizedStringResource("pins.empty.action")
     }
 }
