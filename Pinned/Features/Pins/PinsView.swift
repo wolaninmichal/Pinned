@@ -9,8 +9,10 @@ import SwiftUI
 
 struct PinsView: View {
     
+    let vm: PinsViewModel
+    
     var body: some View {
-        Text("Pins")
+        Text(.Pins.title)
             .font(.pinnedTitle)
             .foregroundStyle(Color.primaryText)
     }
@@ -18,5 +20,5 @@ struct PinsView: View {
 }
 
 #Preview {
-    PinsView()
+    PinsView(vm: .init())
 }

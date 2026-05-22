@@ -13,9 +13,9 @@ public struct RootView: View {
 
     @State private var selectedTab: TabBarChrome.Tab = .inspect
 
-    public init(
+    init(
         inspectViewModel: InspectViewModel,
-        pinsViewModel: PinsViewModel,
+        pinsViewModel: PinsViewModel
     ) {
         self.inspectViewModel = inspectViewModel
         self.pinsViewModel = pinsViewModel
@@ -28,9 +28,9 @@ public struct RootView: View {
             Group {
                 switch selectedTab {
                 case .inspect:
-                    InspectView()
+                    InspectView(vm: inspectViewModel)
                 case .pins:
-                    PinsView()
+                    PinsView(vm: pinsViewModel)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
