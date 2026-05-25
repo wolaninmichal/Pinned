@@ -54,11 +54,9 @@ private extension URLInputField {
                 .frame(width: 32, height: 32)
         } else if !text.isEmpty {
             Button(action: onSubmit) {
-                Image(systemName: "scope")
-                    .font(.system(size: 16, weight: .medium))
-                    .foregroundStyle(Color.primaryText)
-                    .frame(width: 32, height: 32)
-                    .glassCard(.elevated, cornerRadius: 10)
+                IconButton("scope", size: .compact, action: onSubmit)
+                    .disabled(!canSubmit)
+                    .transition(.opacity.combined(with: .scale(scale: 0.85)))
             }
             .buttonStyle(.plain)
             .disabled(!canSubmit)

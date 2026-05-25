@@ -72,4 +72,44 @@ public extension LocalizedStringResource {
         public static let emptyMessage = LocalizedStringResource("pins.empty.message")
         public static let emptyAction = LocalizedStringResource("pins.empty.action")
     }
+    
+    enum PinEditor {
+        public static let createTitle = LocalizedStringResource("pinEditor.create.title")
+        public static let editTitle = LocalizedStringResource("pinEditor.edit.title")
+        public static let createEyebrow = LocalizedStringResource("pinEditor.create.eyebrow")
+        public static let editEyebrow = LocalizedStringResource("pinEditor.edit.eyebrow")
+        
+        public static let domainLabel = LocalizedStringResource("pinEditor.domain.label")
+        public static let domainPrompt = LocalizedStringResource("pinEditor.domain.prompt")
+        public static let includeSubdomains = LocalizedStringResource("pinEditor.includeSubdomains")
+        
+        public static let hashesLabel = LocalizedStringResource("pinEditor.hashes.label")
+        public static let hashPrompt = LocalizedStringResource("pinEditor.hashes.prompt")
+        public static let addHash = LocalizedStringResource("pinEditor.hashes.add")
+        public static let hashesEmpty = LocalizedStringResource("pinEditor.hashes.empty")
+        
+        public static let invalidHashFormat = LocalizedStringResource("pinEditor.validation.invalidFormat")
+        public static let duplicateHash = LocalizedStringResource("pinEditor.validation.duplicate")
+        
+        public static let cancel = LocalizedStringResource("pinEditor.action.cancel")
+        public static let save = LocalizedStringResource("pinEditor.action.save")
+        
+        public static func hashCount(_ count: Int) -> LocalizedStringResource {
+            LocalizedStringResource(
+                "pinEditor.hashes.count",
+                defaultValue: "\(count) PINNED \(count == 1 ? "HASH" : "HASHES")"
+            )
+        }
+    }
+     
+    enum PinRow {
+        public static let subdomainsBadge = LocalizedStringResource("pinRow.subdomains")
+        
+        public static func pinCount(_ count: Int) -> LocalizedStringResource {
+            LocalizedStringResource(
+                "pinRow.pinCount",
+                defaultValue: "\(count) pin\(count == 1 ? "" : "s")"
+            )
+        }
+    }
 }

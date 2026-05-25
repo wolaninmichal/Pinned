@@ -16,25 +16,28 @@ struct InspectView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 0) {
-                header
-                    .padding(.top, 26)
-                    .padding(.bottom, 18)
+        GeometryReader { proxy in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    header
+                        .padding(.top, 26)
+                        .padding(.bottom, 18)
 
-                URLInputField(text: $vm.urlText, isLoading: isLoading) {
-                    Task { await vm.inspect() }
+                    URLInputField(text: $vm.urlText, isLoading: isLoading) {
+                        Task { await vm.inspect() }
+                    }
+                    .padding(.bottom, 22)
+
+                    content
                 }
-                .padding(.bottom, 22)
-
-                content
+                .padding(.horizontal, 20)
+                .padding(.bottom, 100)
+                .frame(minHeight: proxy.size.height, alignment: .top)
+                .animation(.spring(response: 0.35, dampingFraction: 0.85), value: vm.state)
             }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 100)
-            .animation(.spring(response: 0.35, dampingFraction: 0.85), value: vm.state)
+            .scrollIndicators(.hidden)
+            .scrollDismissesKeyboard(.interactively)
         }
-        .scrollIndicators(.hidden)
-        .scrollDismissesKeyboard(.interactively)
     }
 }
 
@@ -82,8 +85,7 @@ private extension InspectView {
                 .plexStyle(.pinnedCaption.with(color: .primaryText.opacity(0.55)))
                 .multilineTextAlignment(.center)
         }
-        .frame(maxWidth: .infinity)
-        .padding(.top, 48)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     var loadingIndicator: some View {
@@ -93,7 +95,7 @@ private extension InspectView {
                 .tint(Color.primaryText)
             Spacer()
         }
-        .padding(.top, 48)
+        .frame(maxHeight: .infinity)
     }
 
     func errorCard(for error: InspectionError) -> some View {

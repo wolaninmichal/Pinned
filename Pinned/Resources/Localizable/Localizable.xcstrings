@@ -4,6 +4,19 @@
     "" : {
 
     },
+    "%lld pin%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld pin%2$@"
+          }
+        }
+      }
+    },
+    "+ subdomains" : {
+
+    },
     "api.example.com" : {
 
     },
@@ -84,6 +97,9 @@
           }
         }
       }
+    },
+    "Delete" : {
+
     },
     "https://" : {
 
@@ -260,6 +276,188 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No match"
+          }
+        }
+      }
+    },
+    "pinEditor.action.cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "pinEditor.action.save" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "pinEditor.create.eyebrow" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NEW PIN SET"
+          }
+        }
+      }
+    },
+    "pinEditor.create.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add pins"
+          }
+        }
+      }
+    },
+    "pinEditor.domain.label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DOMAIN"
+          }
+        }
+      }
+    },
+    "pinEditor.domain.prompt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "api.example.com"
+          }
+        }
+      }
+    },
+    "pinEditor.edit.eyebrow" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EDIT PIN SET"
+          }
+        }
+      }
+    },
+    "pinEditor.edit.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit pins"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.add" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.count" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld PINNED %2$@"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.empty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hashes added yet"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HASHES"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.prompt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "paste base64 SHA-256"
+          }
+        }
+      }
+    },
+    "pinEditor.includeSubdomains" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Include subdomains"
+          }
+        }
+      }
+    },
+    "pinEditor.validation.duplicate" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This hash is already added"
+          }
+        }
+      }
+    },
+    "pinEditor.validation.invalidFormat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hash must be base64 SHA-256 (44 chars, ends with =)"
+          }
+        }
+      }
+    },
+    "pinRow.pinCount" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld pin%2$@"
+          }
+        }
+      }
+    },
+    "pinRow.subdomains" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+ subdomains"
           }
         }
       }
