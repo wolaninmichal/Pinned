@@ -8,15 +8,14 @@
 import SwiftUI
 
 public struct GlassCard: ViewModifier {
-    
     public enum Style {
         case regular
         case elevated
     }
-    
+
     private let style: Style
     private let cornerRadius: CGFloat
-    
+
     public init(
         style: Style = .regular,
         cornerRadius: CGFloat = 14
@@ -24,7 +23,7 @@ public struct GlassCard: ViewModifier {
         self.style = style
         self.cornerRadius = cornerRadius
     }
-    
+
     public func body(content: Content) -> some View {
         content
             .background {
@@ -48,18 +47,22 @@ public struct GlassCard: ViewModifier {
                     .strokeBorder(Color.glassStroke, lineWidth: 0.5)
             }
     }
-    
-    private var tintColor: Color {
+}
+
+// MARK: - Helpers
+private extension GlassCard {
+
+    var tintColor: Color {
         switch style {
-        case .regular:
-            return Color.glassFill
-        case .elevated:
-            return Color.glassFillElevated
+        case .regular: Color.glassFill
+        case .elevated: Color.glassFillElevated
         }
     }
 }
 
+// MARK: - View extension
 public extension View {
+
     func glassCard(
         _ style: GlassCard.Style = .regular,
         cornerRadius: CGFloat = 14
@@ -77,14 +80,13 @@ public extension View {
     ZStack {
         Color.gray.opacity(0.2)
             .ignoresSafeArea()
-        
-        
+
         VStack(spacing: 16) {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Regular Glass Card")
                     .font(.headline)
                     .foregroundStyle(Color.primaryText)
-                
+
                 Text("Delicate")
                     .font(.subheadline)
                     .foregroundStyle(Color.primaryText.opacity(0.75))
@@ -92,12 +94,12 @@ public extension View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             .glassCard(.regular)
-            
+
             VStack(alignment: .leading, spacing: 8) {
                 Text("Elevated Glass Card")
                     .font(.headline)
                     .foregroundStyle(Color.primaryText)
-                
+
                 Text("Stronger")
                     .font(.subheadline)
                     .foregroundStyle(Color.primaryText.opacity(0.75))

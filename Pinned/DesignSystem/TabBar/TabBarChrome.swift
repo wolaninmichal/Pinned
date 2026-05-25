@@ -8,7 +8,6 @@
 import SwiftUI
 
 public struct TabBarChrome: View {
-    
     public enum Tab: Hashable {
         case inspect, pins
     }
@@ -22,8 +21,8 @@ public struct TabBarChrome: View {
     
     public var body: some View {
         HStack(spacing: 0) {
-            tabButton(.inspect, icon: "scope", label: "Inspect")
-            tabButton(.pins, icon: "pin", label: "Pins")
+            tabButton(.inspect, icon: "scope", label: .Tab.inspect)
+            tabButton(.pins, icon: "pin", label: .Tab.pins)
         }
         .padding(.horizontal, 6)
         .padding(.vertical, 6)
@@ -43,7 +42,7 @@ public extension TabBarChrome {
     private func tabButton(
         _ tab: Tab,
         icon: String,
-        label: String
+        label: LocalizedStringResource
     ) -> some View {
         Button {
             withAnimation(

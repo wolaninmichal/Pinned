@@ -1,0 +1,551 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%lld pin%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld pin%2$@"
+          }
+        }
+      }
+    },
+    "+ subdomains" : {
+
+    },
+    "api.example.com" : {
+
+    },
+    "certificate.issuedBy" : {
+      "comment" : "Subtitle on a certificate card. %@ is the issuer common name.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "issued by %@"
+          }
+        }
+      }
+    },
+    "certificate.label.spkiHash" : {
+      "comment" : "Section label above the SPKI hash on a certificate card.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SPKI HASH"
+          }
+        }
+      }
+    },
+    "certificate.position.intermediate" : {
+      "comment" : "Position badge for an intermediate certificate. %lld is the chain index.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "INTERMEDIATE · %lld"
+          }
+        }
+      }
+    },
+    "certificate.position.leaf" : {
+      "comment" : "Position badge for the leaf certificate.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LEAF · 0"
+          }
+        }
+      }
+    },
+    "certificate.position.root" : {
+      "comment" : "Position badge for the root certificate.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROOT"
+          }
+        }
+      }
+    },
+    "chain.header.count" : {
+      "comment" : "Header above the certificate chain. %lld is the number of certificates.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "CHAIN · %lld CERT"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "CHAIN · %lld CERTS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Delete" : {
+
+    },
+    "https://" : {
+
+    },
+    "inspect.error.emptyChain" : {
+      "comment" : "Error message when the server returns no certificates.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Server returned no certificates."
+          }
+        }
+      }
+    },
+    "inspect.error.hashingFailed" : {
+      "comment" : "Error message when an SPKI hash could not be computed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not compute SPKI hash for one of the certificates."
+          }
+        }
+      }
+    },
+    "inspect.error.invalidURL" : {
+      "comment" : "Error message when the entered URL cannot be parsed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not parse URL. Check the format and try again."
+          }
+        }
+      }
+    },
+    "inspect.error.standardValidation" : {
+      "comment" : "Error message when standard certificate validation fails.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard certificate validation failed — cert may be expired or for the wrong host."
+          }
+        }
+      }
+    },
+    "inspect.error.title" : {
+      "comment" : "Title of the inspection error card.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inspection failed"
+          }
+        }
+      }
+    },
+    "inspect.error.tlsHandshake" : {
+      "comment" : "Error message when the TLS handshake fails. %@ is the underlying reason.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TLS handshake failed: %@"
+          }
+        }
+      }
+    },
+    "inspect.header.eyebrow" : {
+      "comment" : "Small caption above the Inspect screen title.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinned"
+          }
+        }
+      }
+    },
+    "inspect.header.title" : {
+      "comment" : "Title of the Inspect screen.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inspect"
+          }
+        }
+      }
+    },
+    "inspect.placeholder.message" : {
+      "comment" : "Empty-state message on the Inspect screen.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a host and tap the scope to\ninspect its certificate chain."
+          }
+        }
+      }
+    },
+    "match.level.intermediate" : {
+      "comment" : "Human-readable match level. %lld is the intermediate index.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "intermediate (index %lld)"
+          }
+        }
+      }
+    },
+    "match.level.leaf" : {
+      "comment" : "Human-readable match level for the leaf certificate.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "leaf"
+          }
+        }
+      }
+    },
+    "match.level.root" : {
+      "comment" : "Human-readable match level for the root certificate.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "root"
+          }
+        }
+      }
+    },
+    "match.matched.subtitle" : {
+      "comment" : "Subtitle of the success banner. %@ is the match level description.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "matched on %@"
+          }
+        }
+      }
+    },
+    "match.matched.title" : {
+      "comment" : "Title of the pin-match success banner.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin match"
+          }
+        }
+      }
+    },
+    "match.mismatch.subtitle" : {
+      "comment" : "Subtitle of the mismatch banner.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "none of the pins matched any cert in chain"
+          }
+        }
+      }
+    },
+    "match.mismatch.title" : {
+      "comment" : "Title of the pin-mismatch banner.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No match"
+          }
+        }
+      }
+    },
+    "pinEditor.action.cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "pinEditor.action.save" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "pinEditor.create.eyebrow" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NEW PIN SET"
+          }
+        }
+      }
+    },
+    "pinEditor.create.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add pins"
+          }
+        }
+      }
+    },
+    "pinEditor.domain.label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DOMAIN"
+          }
+        }
+      }
+    },
+    "pinEditor.domain.prompt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "api.example.com"
+          }
+        }
+      }
+    },
+    "pinEditor.edit.eyebrow" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EDIT PIN SET"
+          }
+        }
+      }
+    },
+    "pinEditor.edit.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit pins"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.add" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.count" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld PINNED %2$@"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.empty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hashes added yet"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HASHES"
+          }
+        }
+      }
+    },
+    "pinEditor.hashes.prompt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "paste base64 SHA-256"
+          }
+        }
+      }
+    },
+    "pinEditor.includeSubdomains" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Include subdomains"
+          }
+        }
+      }
+    },
+    "pinEditor.validation.duplicate" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This hash is already added"
+          }
+        }
+      }
+    },
+    "pinEditor.validation.invalidFormat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hash must be base64 SHA-256 (44 chars, ends with =)"
+          }
+        }
+      }
+    },
+    "pinRow.pinCount" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld pin%2$@"
+          }
+        }
+      }
+    },
+    "pinRow.subdomains" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+ subdomains"
+          }
+        }
+      }
+    },
+    "pins.empty.action" : {
+      "comment" : "Call-to-action button on the empty Pins screen.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add your first pin set"
+          }
+        }
+      }
+    },
+    "pins.empty.message" : {
+      "comment" : "Empty-state message on the Pins screen.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save expected SPKI hashes for the\ndomains you want to monitor."
+          }
+        }
+      }
+    },
+    "pins.empty.title" : {
+      "comment" : "Title of the empty-state on the Pins screen.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No pins yet"
+          }
+        }
+      }
+    },
+    "pins.header.eyebrow" : {
+      "comment" : "Small caption above the Pins screen title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinned"
+          }
+        }
+      }
+    },
+    "pins.title" : {
+      "comment" : "Title of the Pins screen.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pins"
+          }
+        }
+      }
+    },
+    "tab.inspect" : {
+      "comment" : "Tab bar label for the Inspect tab.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inspect"
+          }
+        }
+      }
+    },
+    "tab.pins" : {
+      "comment" : "Tab bar label for the Pins tab.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pins"
+          }
+        }
+      }
+    },
+    "TLS 1.3" : {
+
+    }
+  },
+  "version" : "1.2"
+}
