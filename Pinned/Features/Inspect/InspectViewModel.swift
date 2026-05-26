@@ -11,7 +11,6 @@ import Observation
 @Observable
 @MainActor
 public final class InspectViewModel {
-
     public enum State: Equatable {
         case idle
         case loading

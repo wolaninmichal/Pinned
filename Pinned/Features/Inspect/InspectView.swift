@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct InspectView: View {
-
     @Bindable var vm: InspectViewModel
 
     init(vm: InspectViewModel) {
