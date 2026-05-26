@@ -12,7 +12,6 @@ import Observation
 @Observable
 @MainActor
 public final class PinUpsertViewModel {
-
     public enum Mode: Equatable {
         case create
         case edit(PinSet)

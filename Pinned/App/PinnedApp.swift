@@ -9,15 +9,18 @@ import SwiftUI
 
 @main
 struct PinnedApp: App {
-    
+
     private let inspectViewModel: InspectViewModel
     private let pinsViewModel: PinsViewModel
-    
+
     init() {
-        self.inspectViewModel = InspectViewModel()
-        self.pinsViewModel = PinsViewModel()
+        let store: PinStore = .init()
+        let pinRepository: PinRepository = CoreDataPinRepository(store: store)
+
+        self.inspectViewModel = .init()
+        self.pinsViewModel = .init(repository: pinRepository)
     }
-    
+
     var body: some Scene {
         WindowGroup {
             RootView(

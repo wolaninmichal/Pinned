@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PinsView: View {
-
     @Bindable var vm: PinsViewModel
 
     var body: some View {
@@ -19,6 +18,7 @@ struct PinsView: View {
                 populatedState
             }
         }
+        .task { await vm.load() }
         .sheet(item: $vm.route) { route in
             upsert(for: route)
         }
@@ -28,7 +28,6 @@ struct PinsView: View {
 // MARK: - States
 private extension PinsView {
 
-    /// Pusty stan zostaje na ScrollView + GeometryReader - List nie wycentruje placeholdera.
     var emptyState: some View {
         GeometryReader { proxy in
             ScrollView {
@@ -48,8 +47,6 @@ private extension PinsView {
         }
     }
 
-    /// Stan z wierszami na List - daje systemowe swipe-to-delete.
-    /// List ostylowany na przezroczysty, bez separatorów, z insetami pasującymi do reszty ekranu.
     var populatedState: some View {
         VStack(alignment: .leading, spacing: 0) {
             header
@@ -65,18 +62,17 @@ private extension PinsView {
                         .listRowSeparator(.hidden)
                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button(role: .destructive) {
-                                vm.delete(pinSet)
+                                Task { await vm.delete(pinSet) }
                             } label: {
-                                // Label("Delete", systemImage: "trash")
                                 Image(systemName: "trash")
                             }
                         }
                 }
             }
             .listStyle(.plain)
-            .scrollContentBackground(.hidden)   // ukryj domyślne tło List
+            .scrollContentBackground(.hidden)
             .scrollIndicators(.hidden)
-            .contentMargins(.bottom, 100, for: .scrollContent)   // miejsce na floating tab bar
+            .contentMargins(.bottom, 100, for: .scrollContent)
         }
     }
 }
@@ -117,11 +113,11 @@ private extension PinsView {
                         .truncationMode(.middle)
                     Spacer(minLength: 8)
                     if pinSet.includeSubdomains {
-                        Text("+ subdomains")
+                        Text(.PinRow.subdomainsBadge)
                             .plexStyle(.pinnedCaption.with(color: .primaryText.opacity(0.6)))
                     }
                 }
-                Text("\(pinSet.hashes.count) pin\(pinSet.hashes.count == 1 ? "" : "s")")
+                Text(.PinRow.pinCount(pinSet.hashes.count))
                     .plexStyle(.pinnedCaption.with(color: .primaryText.opacity(0.55)))
             }
             .padding(.horizontal, 14)
@@ -152,13 +148,13 @@ private extension PinsView {
     @ViewBuilder
     func upsert(for route: PinsRoute) -> some View {
         let mode: PinUpsertViewModel.Mode = switch route {
-        case .create:           .create
+        case .create: .create
         case .edit(let pinSet): .edit(pinSet)
         }
 
         PinUpsertView(
             vm: PinUpsertViewModel(mode: mode),
-            onSave: { vm.save($0) },
+            onSave: { pinSet in Task { await vm.save(pinSet) } },
             onCancel: { vm.dismissRoute() }
         )
         .presentationBackground(Color.primaryBackground)
@@ -169,18 +165,30 @@ private extension PinsView {
 #Preview("Empty") {
     ZStack {
         Color.primaryBackground.ignoresSafeArea()
-        PinsView(vm: PinsViewModel())
+        PinsView(vm: PinsViewModel(repository: InMemoryPinRepository()))
     }
     .preferredColorScheme(.light)
 }
 
 #Preview("With pins") {
-    let vm = PinsViewModel()
-    vm.save(PinSet(domain: "api.example.com", hashes: ["r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="], includeSubdomains: true))
-    vm.save(PinSet(domain: "api.github.com", hashes: ["ZqQk/sJxFf6jUNFCCXJZpEPmRZj5wK7lXJpkN8YHWvA=", "x/Q42aFnL5LBjQQqYxHmZf0vM9wD4XGqzPKnTSqL1Pk="]))
+    let repository = InMemoryPinRepository(seed: [
+        PinSet(
+            domain: "api.example.com",
+            hashes: ["r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="],
+            includeSubdomains: true
+        ),
+        PinSet(
+            domain: "api.github.com",
+            hashes: [
+                "ZqQk/sJxFf6jUNFCCXJZpEPmRZj5wK7lXJpkN8YHWvA=",
+                "x/Q42aFnL5LBjQQqYxHmZf0vM9wD4XGqzPKnTSqL1Pk="
+            ]
+        )
+    ])
+
     return ZStack {
         Color.primaryBackground.ignoresSafeArea()
-        PinsView(vm: vm)
+        PinsView(vm: PinsViewModel(repository: repository))
     }
     .preferredColorScheme(.light)
 }

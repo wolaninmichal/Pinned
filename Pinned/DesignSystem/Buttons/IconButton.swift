@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct IconButton: View {
-
     enum Size {
         case compact
         case standard

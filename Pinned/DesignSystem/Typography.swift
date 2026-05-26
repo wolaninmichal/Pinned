@@ -58,10 +58,10 @@ public struct PlexTextStyle {
 // MARK: - Predefined styles
 
 public extension PlexTextStyle {
-    static let pinnedTitle = PlexTextStyle(font: .plexMono(36, weight: .bold),   tracking: -1.0)
+    static let pinnedTitle = PlexTextStyle(font: .plexMono(36, weight: .bold), tracking: -1.0)
     static let pinnedHeading = PlexTextStyle(font: .plexMono(13, weight: .medium), tracking: -0.4)
-    static let pinnedBody = PlexTextStyle(font: .plexMono(13),                  tracking: -0.6)
-    static let pinnedCaption = PlexTextStyle(font: .plexMono(11),                  tracking: -0.6)
+    static let pinnedBody = PlexTextStyle(font: .plexMono(13), tracking: -0.6)
+    static let pinnedCaption = PlexTextStyle(font: .plexMono(11), tracking: -0.6)
     static let pinnedHash = PlexTextStyle(font: .plexMono(12, weight: .medium), tracking: -0.24)
 }
 

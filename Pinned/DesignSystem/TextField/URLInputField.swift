@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct URLInputField: View {
-
     @Binding var text: String
     var isLoading: Bool = false
     var onSubmit: () -> Void

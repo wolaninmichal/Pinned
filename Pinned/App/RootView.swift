@@ -47,6 +47,6 @@ public struct RootView: View {
 #Preview("Root View") {
     RootView(
         inspectViewModel: InspectViewModel(),
-        pinsViewModel: PinsViewModel()
+        pinsViewModel: PinsViewModel(repository: InMemoryPinRepository())
     )
 }
