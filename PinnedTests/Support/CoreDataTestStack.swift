@@ -23,4 +23,3 @@ enum CoreDataTestStack {
         mStore().container.viewContext
     }
 }
- 

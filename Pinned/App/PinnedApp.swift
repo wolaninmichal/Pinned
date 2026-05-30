@@ -14,10 +14,14 @@ struct PinnedApp: App {
     private let pinsViewModel: PinsViewModel
 
     init() {
+        #if DEBUG
+        Log.setLogTypes([.info, .debug, .warning, .error, .initObj, .deinitObj, .database])
+        #endif
+
         let store: PinStore = .init()
         let pinRepository: PinRepository = CoreDataPinRepository(store: store)
 
-        self.inspectViewModel = .init()
+        self.inspectViewModel = .init(pinRepository: pinRepository)
         self.pinsViewModel = .init(repository: pinRepository)
     }
 

@@ -48,14 +48,14 @@
 			path = Pinned;
 			sourceTree = "<group>";
 		};
-		8E1761B52FB313B800D7871D /* PinnedTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PinnedTests;
-			sourceTree = "<group>";
-		};
 		8E1761BF2FB313B800D7871D /* PinnedUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PinnedUITests;
+			sourceTree = "<group>";
+		};
+		8EF212562FC72B2100FA9A6F /* PinnedTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PinnedTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1761A72FB313B600D7871D /* Pinned */,
-				8E1761B52FB313B800D7871D /* PinnedTests */,
+				8EF212562FC72B2100FA9A6F /* PinnedTests */,
 				8E1761BF2FB313B800D7871D /* PinnedUITests */,
 				8E1761A62FB313B600D7871D /* Products */,
 			);
@@ -144,7 +144,7 @@
 				8E1761B42FB313B800D7871D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				8E1761B52FB313B800D7871D /* PinnedTests */,
+				8EF212562FC72B2100FA9A6F /* PinnedTests */,
 			);
 			name = PinnedTests;
 			packageProductDependencies = (
