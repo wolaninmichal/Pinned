@@ -20,8 +20,7 @@ struct PinSetEntityMappingTests {
     }
 
     // MARK: - Round-trip
-
-    @Test("apply → toDomain is a faithful round-trip of all fields")
+    @Test("apply -> toDomain is a faithful round-trip of all fields")
     func roundTrip_preservesAllFields() throws {
         let pin = PinSetFactory.make(
             hashes: [PinSetFactory.validHashA, PinSetFactory.validHashB],

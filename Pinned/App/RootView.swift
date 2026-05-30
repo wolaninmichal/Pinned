@@ -45,8 +45,12 @@ public struct RootView: View {
 }
 
 #Preview("Root View") {
-    RootView(
-        inspectViewModel: InspectViewModel(),
-        pinsViewModel: PinsViewModel(repository: InMemoryPinRepository())
+    let repository = InMemoryPinRepository()
+    return RootView(
+        inspectViewModel: InspectViewModel(
+            inspector: StubCertificateInspector.succeeding,
+            pinRepository: repository
+        ),
+        pinsViewModel: PinsViewModel(repository: repository)
     )
 }

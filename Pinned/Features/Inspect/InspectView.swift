@@ -135,11 +135,3 @@ private extension InspectView {
         }
     }
 }
-
-#Preview("Inspect View") {
-    ZStack {
-        Color.primaryBackground.ignoresSafeArea()
-        InspectView(vm: InspectViewModel())
-    }
-    .preferredColorScheme(.light)
-}

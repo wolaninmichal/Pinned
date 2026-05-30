@@ -69,8 +69,6 @@ struct InMemoryPinRepositoryTests {
         await #expect(throws: RepositoryError.self) {
             try await sut.save(PinSetFactory.make())
         }
-        // failureMode only affects save (fetch still succeeds), so we verify that
-        // nothing was written by reading back an empty store.
         #expect(try await sut.fetchAll().isEmpty)
     }
 
