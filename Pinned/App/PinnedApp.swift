@@ -24,7 +24,7 @@ struct PinnedApp: App {
         self.inspectViewModel = .init(pinRepository: pinRepository)
         self.pinsViewModel = .init(repository: pinRepository)
     }
-
+    
     var body: some Scene {
         WindowGroup {
             RootView(
